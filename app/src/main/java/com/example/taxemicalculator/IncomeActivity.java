@@ -1,5 +1,7 @@
 package com.example.taxemicalculator;
 
+import static java.sql.DriverManager.println;
+
 import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.widget.Button;
@@ -38,45 +40,48 @@ public class IncomeActivity extends AppCompatActivity {
             }
         });
     }
-
-
     @SuppressLint("SetTextI18n")
     public void calculate()
     {
         long Total = 0;
         long Tax=0;
         long in= Integer.parseInt(et.getText().toString());
-        if (in>300000 && in<=700000)
+        if(in>0 && in<=300000)
+        {
+            Tax=0;
+            Total=in;
+        }
+        else if (in>300000 && in<=700000)
         {
             Tax=(in*5)/100;
-            Total=in+Tax;
+            Total=in-Tax;
         }
         else if(in>700000 && in<=1000000)
         {
             Tax=(in*10)/100;
-            Total=in+Tax;
+            Total=in-Tax;
         }
         else if(in>1000000 && in<=1200000)
         {
             Tax=(in*15)/100;
-            Total=in+Tax;
+            Total=in-Tax;
         }
         else if (in>1200000 && in<=1500000)
         {
             Tax=(in*20)/100;
-            Total=in+Tax;
+            Total=in-Tax;
         }
         else if(in >= 4000000 && in < 5000000)
         {
             Tax = (in * 25)/100;
-            Total = in + Tax;
+            Total = in - Tax;
         }
         else if (in>1500000)
         {
             Tax=(in*30)/100;
-            Total=in+Tax;
+            Total=in-Tax;
         }
         tx1.setText("Tax on your income "+et.getText()+"= \t"+Tax+"\n \n"+
-                "Total Income (Inclusion of Tax) "+"= \t"+Total);
+                "Total Income  "+"= \t"+Total);
     }
 }
