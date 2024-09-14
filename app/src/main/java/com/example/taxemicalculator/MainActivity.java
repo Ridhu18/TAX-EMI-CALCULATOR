@@ -19,14 +19,16 @@ public class MainActivity extends AppCompatActivity {
         b2 = findViewById(R.id.button2);
 
         b1.setOnClickListener(view -> {
-            Intent intent= new Intent(MainActivity.this, IncomeActivity.class);
+            Intent intent= new Intent(MainActivity.this,taxsplashscreen.class);
             startActivity(intent);
+            overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
         });
 
         b2.setOnClickListener(view -> {
             Intent intent= new Intent(MainActivity.this, EmiActivity.class);
             startActivity(intent);
         });
+
 
 
     }
