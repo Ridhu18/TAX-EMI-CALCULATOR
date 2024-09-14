@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/emi"
+    tools:context=".MainActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:orientation="vertical"
+        android:paddingLeft="20dp"
+        android:paddingTop="10dp"
+        android:paddingRight="20dp"
+        tools:ignore="MissingPrefix">
+        <EditText
+            android:id="@+id/principal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:digits="0123456789."
+            android:hint="principal"
+            android:inputType="number"
+            android:minHeight="48dp"
+            android:singleLine="true"
+            tools:ignore="Autofill,HardcodedText,VisualLintTextFieldSize" />
+        <EditText
+            android:id="@+id/interest"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:digits="0123456789."
+            android:hint="interest"
+            android:inputType="number"
+            android:minHeight="48dp"
+            android:singleLine="true"
+            tools:ignore="Autofill,HardcodedText,TextContrastCheck,VisualLintTextFieldSize" />
+        <EditText
+            android:id="@+id/years"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:digits="0123456789."
+            android:hint="years"
+            android:inputType="number"
+            android:minHeight="48dp"
+            tools:ignore="Autofill,HardcodedText,VisualLintTextFieldSize" />
+        <Button
+            android:id="@+id/btn_calculate2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:background="@color/black"
+            android:text="Calculate"
+            android:textColor="@android:color/white"
+            tools:ignore="HardcodedText,VisualLintButtonSize" />
+        <TextView
+            android:id="@+id/em"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="EMI VALUE:"
+            android:maxEms="0"
+            android:minHeight="48dp"
+            tools:ignore="Autofill,HardcodedText,TextContrastCheck,VisualLintTextFieldSize" />
+        <TextView
+            android:id="@+id/emi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:maxEms="0"
+            android:minHeight="48dp"
+            tools:ignore="Autofill,HardcodedText,TextContrastCheck,TextViewEdits,VisualLintTextFieldSize" />
+        <TextView
+            android:id="@+id/intr"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Intrest Total:"
+            android:minHeight="48dp"
+            tools:ignore="Autofill,HardcodedText,VisualLintTextFieldSize" />
+        <TextView
+            android:id="@+id/interest_total"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:minHeight="48dp"
+            tools:ignore="Autofill,HardcodedText,TextViewEdits,VisualLintTextFieldSize" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

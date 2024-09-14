@@ -23,6 +23,11 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
         });
 
+        b2.setOnClickListener(view -> {
+            Intent intent= new Intent(MainActivity.this, EmiActivity.class);
+            startActivity(intent);
+        });
+
 
     }
 }
