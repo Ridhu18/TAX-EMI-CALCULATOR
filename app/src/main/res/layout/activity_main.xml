@@ -8,11 +8,27 @@
     android:background="@drawable/home"
     tools:context=".MainActivity">
 
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="TODO"
+        android:text="Select Your Calculator Type:"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/button3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.393"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.879"
+        tools:ignore="HardcodedText"/>
+
     <Button
         android:id="@+id/button1"
         android:layout_width="280dp"
         android:layout_height="53dp"
-        android:background="@color/black"
+        android:background="@drawable/oval"
         android:text="Income Tax Calculator"
         android:textColor="@color/white"
         app:layout_constraintBottom_toTopOf="@+id/button2"
@@ -29,7 +45,7 @@
         android:id="@+id/button2"
         android:layout_width="284dp"
         android:layout_height="51dp"
-        android:background="@color/black"
+        android:background="@drawable/oval"
         android:text="EMI Calculator"
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -44,8 +60,8 @@
         android:id="@+id/button3"
         android:layout_width="280dp"
         android:layout_height="53dp"
-        android:background="@color/black"
-        android:text="Simple Calculator"
+        android:background="@drawable/oval"
+        android:text="SIP Calculator"
         android:textColor="@color/white"
         app:layout_constraintBottom_toTopOf="@+id/button1"
         app:layout_constraintEnd_toEndOf="parent"
@@ -55,21 +71,7 @@
         app:layout_constraintVertical_bias="0.89"
         tools:ignore="HardcodedText" />
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:contentDescription="TODO"
-        android:text="Select Your Calculator Type:"
-        android:textColor="@color/black"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/button3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.393"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.879"
-        tools:ignore="HardcodedText"/>
+
 
     <ImageView
         android:id="@+id/imageView"
