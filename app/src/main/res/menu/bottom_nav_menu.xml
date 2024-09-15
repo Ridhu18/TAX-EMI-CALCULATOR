@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_sip_calculator"
+        android:icon="@drawable/sip_nav"
+        android:title="Sip Calculator"
+        tools:ignore="HardcodedText" />
+
+    <item
+        android:id="@+id/nav_income_calculator"
+        android:icon="@drawable/tax_nav"
+        android:title="IncomeTax Calculator" />
+
+    <item
+        android:id="@+id/nav_emi_calculator"
+        android:icon="@drawable/emi_nav"
+        android:title="Emi Calculator" />
+
+
+</menu>
