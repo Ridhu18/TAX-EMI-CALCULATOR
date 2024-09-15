@@ -23,14 +23,14 @@ public class EmiActivity extends AppCompatActivity {
 
         bottomNavigationView.setOnNavigationItemSelectedListener(item -> {
             int id = item.getItemId();
-            Intent splashIntent = new Intent(EmiActivity.this, taxsplashscreen.class);
+            Intent splashIntent = new Intent(EmiActivity.this, emisplashscreen.class);
             if (id == R.id.nav_income_calculator)
             {
-                splashIntent.putExtra("TARGET_ACTIVITY", "IncomeActivity");
+                splashIntent = new Intent(EmiActivity.this, taxsplashscreen.class);
 
             } else if (id == R.id.nav_sip_calculator)
             {
-                splashIntent.putExtra("TARGET_ACTIVITY", "SipActivity");
+                splashIntent = new Intent(EmiActivity.this, taxsplashscreen.class);
 
             } else if (id == R.id.nav_emi_calculator)
             {

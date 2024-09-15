@@ -1,6 +1,5 @@
 package com.example.taxemicalculator;
 
-import static java.sql.DriverManager.println;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
@@ -25,7 +24,7 @@ public class IncomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.tax_calculator);
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
-        bottomNavigationView.setSelectedItemId(R.id.nav_emi_calculator);
+        bottomNavigationView.setSelectedItemId(R.id.nav_income_calculator);
 
         bottomNavigationView.setOnNavigationItemSelectedListener(item -> {
             int id = item.getItemId();
@@ -36,11 +35,11 @@ public class IncomeActivity extends AppCompatActivity {
 
             } else if (id == R.id.nav_sip_calculator)
             {
-                splashIntent.putExtra("TARGET_ACTIVITY", "SipActivity");
+                splashIntent = new Intent(IncomeActivity.this, emisplashscreen.class);
 
             } else if (id == R.id.nav_emi_calculator)
             {
-                splashIntent.putExtra("TARGET_ACTIVITY", "EmiActivity");
+                splashIntent = new Intent(IncomeActivity.this, emisplashscreen.class);
             }
             startActivity(splashIntent);
             overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
