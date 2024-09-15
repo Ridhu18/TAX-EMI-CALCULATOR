@@ -5,6 +5,8 @@ import android.text.TextUtils;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.content.Intent;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -15,6 +17,31 @@ public class EmiActivity extends AppCompatActivity {
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.emi_activity);
+
+        BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
+        bottomNavigationView.setSelectedItemId(R.id.nav_emi_calculator);
+
+        bottomNavigationView.setOnNavigationItemSelectedListener(item -> {
+            int id = item.getItemId();
+            Intent splashIntent = new Intent(EmiActivity.this, taxsplashscreen.class);
+            if (id == R.id.nav_income_calculator)
+            {
+                splashIntent.putExtra("TARGET_ACTIVITY", "IncomeActivity");
+
+            } else if (id == R.id.nav_sip_calculator)
+            {
+                splashIntent.putExtra("TARGET_ACTIVITY", "SipActivity");
+
+            } else if (id == R.id.nav_emi_calculator)
+            {
+                return true;
+            }
+            startActivity(splashIntent);
+            overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+
+            return true;
+        });
+
         final EditText P = findViewById(R.id.principal);
         final EditText I = findViewById(R.id.interest);
         final EditText Y = findViewById(R.id.years);

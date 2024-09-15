@@ -8,6 +8,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.content.Intent;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -22,6 +24,29 @@ public class IncomeActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.tax_calculator);
+        BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
+        bottomNavigationView.setSelectedItemId(R.id.nav_emi_calculator);
+
+        bottomNavigationView.setOnNavigationItemSelectedListener(item -> {
+            int id = item.getItemId();
+            Intent splashIntent = new Intent(IncomeActivity.this, taxsplashscreen.class);
+            if (id == R.id.nav_income_calculator)
+            {
+                return true;
+
+            } else if (id == R.id.nav_sip_calculator)
+            {
+                splashIntent.putExtra("TARGET_ACTIVITY", "SipActivity");
+
+            } else if (id == R.id.nav_emi_calculator)
+            {
+                splashIntent.putExtra("TARGET_ACTIVITY", "EmiActivity");
+            }
+            startActivity(splashIntent);
+            overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+
+            return true;
+        });
 
         et=findViewById(R.id.edit1);
         tx=findViewById(R.id.text1);
