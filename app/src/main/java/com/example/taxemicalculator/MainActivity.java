@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         b2.setOnClickListener(view -> {
-            Intent intent= new Intent(MainActivity.this, EmiActivity.class);
+            Intent intent= new Intent(MainActivity.this, emisplashscreen.class);
             startActivity(intent);
         });
 
