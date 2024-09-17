@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         b3.setOnClickListener(view -> {
-            Intent intent= new Intent(MainActivity.this, SipActivity.class);
+            Intent intent= new Intent(MainActivity.this,sipsplashscreen.class);
             startActivity(intent);
         });
 

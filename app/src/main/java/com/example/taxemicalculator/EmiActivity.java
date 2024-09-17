@@ -30,7 +30,7 @@ public class EmiActivity extends AppCompatActivity {
 
             } else if (id == R.id.nav_sip_calculator)
             {
-                splashIntent = new Intent(EmiActivity.this, taxsplashscreen.class);
+                splashIntent = new Intent(EmiActivity.this, sipsplashscreen.class);
 
             } else if (id == R.id.nav_emi_calculator)
             {

@@ -35,7 +35,7 @@ public class IncomeActivity extends AppCompatActivity {
 
             } else if (id == R.id.nav_sip_calculator)
             {
-                splashIntent = new Intent(IncomeActivity.this, emisplashscreen.class);
+                splashIntent = new Intent(IncomeActivity.this, sipsplashscreen.class);
 
             } else if (id == R.id.nav_emi_calculator)
             {
