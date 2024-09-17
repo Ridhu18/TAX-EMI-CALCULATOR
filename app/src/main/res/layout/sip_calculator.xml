@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@drawable/sip"
+    >
+
+    <EditText
+        android:id="@+id/amountInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Monthly Investment Amount"
+        android:inputType="numberDecimal"
+        android:layout_marginBottom="16dp"/>
+
+    <EditText
+        android:id="@+id/interestRateInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Annual Interest Rate (%)"
+        android:inputType="numberDecimal"
+        android:layout_below="@id/amountInput"
+        android:layout_marginBottom="16dp"/>
+
+    <EditText
+        android:id="@+id/yearsInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Number of Years"
+        android:inputType="numberDecimal"
+        android:layout_below="@id/interestRateInput"
+        android:layout_marginBottom="16dp"/>
+
+    <Button
+        android:id="@+id/calculateButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Calculate SIP"
+        android:layout_below="@id/yearsInput"/>
+    <TextView
+        android:id="@+id/ExpectedAmountTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Expected Amount: 0.00"
+        android:layout_below="@id/calculateButton"
+        android:layout_marginTop="16dp"/>
+    <TextView
+        android:id="@+id/AmountInvestedTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Amount Invested: 0.00"
+        android:layout_below="@id/ExpectedAmountTextView"
+        android:layout_marginTop="16dp"/>
+
+
+    <TextView
+        android:id="@+id/WealthGainTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Wealth Gain: 0.00"
+        android:layout_below="@id/AmountInvestedTextView"
+        android:layout_marginTop="16dp"/>
+</RelativeLayout>

@@ -9,6 +9,7 @@ public class MainActivity extends AppCompatActivity {
 
     Button b1;
     Button b2;
+    Button b3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
 
         b1 = findViewById(R.id.button1);
         b2 = findViewById(R.id.button2);
+        b3=findViewById(R.id.button3);
 
         b1.setOnClickListener(view -> {
             Intent intent= new Intent(MainActivity.this,taxsplashscreen.class);
@@ -26,6 +28,11 @@ public class MainActivity extends AppCompatActivity {
 
         b2.setOnClickListener(view -> {
             Intent intent= new Intent(MainActivity.this, emisplashscreen.class);
+            startActivity(intent);
+        });
+
+        b3.setOnClickListener(view -> {
+            Intent intent= new Intent(MainActivity.this, SipActivity.class);
             startActivity(intent);
         });
 
