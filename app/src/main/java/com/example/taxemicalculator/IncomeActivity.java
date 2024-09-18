@@ -59,11 +59,21 @@ public class IncomeActivity extends AppCompatActivity {
                 calculate();
             }
             catch (Exception e) {
-                Toast.makeText(getApplicationContext(), "You have exceeded the Input Limit!", Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(), "Enter Your Income", Toast.LENGTH_LONG).show();
                 tx1.setText("");
             }
         });
     }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        Intent intent = new Intent(IncomeActivity.this, MainActivity.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
+        startActivity(intent);
+        finish();
+    }
+
     @SuppressLint("SetTextI18n")
     public void calculate()
     {

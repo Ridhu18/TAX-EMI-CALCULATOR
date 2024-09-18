@@ -88,6 +88,14 @@ public class EmiActivity extends AppCompatActivity {
             TI.setText(String.valueOf(ti));
         });
     }
+    public void onBackPressed() {
+        super.onBackPressed();
+        Intent intent = new Intent(EmiActivity.this, MainActivity.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
+        startActivity(intent);
+        finish();
+    }
+
     public  float calPric(float p)
     {
         return (p);
